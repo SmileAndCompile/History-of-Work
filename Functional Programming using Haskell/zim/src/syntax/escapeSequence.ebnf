@@ -1,0 +1,2 @@
+escapeSequence ::= "\\" ("n" | "t" | "\'" | "\"" | "\\" | "u" | "r")
+;level="lexical".

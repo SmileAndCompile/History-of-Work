@@ -1,0 +1,28 @@
+\BOOKMARK [1][-]{section.1}{1 Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{1.1 Scope and Requirements}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{2 Design}{}% 3
+\BOOKMARK [1][-]{section.3}{3 Implementation}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{3.1 Zim}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{3.2 Lexer}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.1}{3.2.1 Overall lexer}{subsection.3.2}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.2}{3.2.2 Language Element Lexers}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.3}{3.2.3 Keywords}{subsection.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.3}{3.3 Token}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{3.4 Matching}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.5}{3.5 template.html}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.6}{3.6 Zim Installation}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.7}{3.7 Zim User Guide}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.7.1}{3.7.1 Command Syntax}{subsection.3.7}% 15
+\BOOKMARK [3][-]{subsubsection.3.7.2}{3.7.2 Example Commands: }{subsection.3.7}% 16
+\BOOKMARK [1][-]{section.4}{4 Results}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{4.1 Function}{section.4}% 18
+\BOOKMARK [3][-]{subsubsection.4.1.1}{4.1.1 Listing the Files}{subsection.4.1}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.2}{4.1.2 Matches}{subsection.4.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.3}{4.1.3 Sources}{subsection.4.1}% 21
+\BOOKMARK [3][-]{subsubsection.4.1.4}{4.1.4 Cross Totals}{subsection.4.1}% 22
+\BOOKMARK [3][-]{subsubsection.4.1.5}{4.1.5 Clusters}{subsection.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.2}{4.2 Performance}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{5 Conclusion and Reflections}{}% 25
+\BOOKMARK [2][-]{subsection.5.1}{5.1 Discussion}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{5.2 Future Work}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.3}{5.3 Reflection}{section.5}% 28

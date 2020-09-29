@@ -1,0 +1,3 @@
+source ::= {$whitespace$ | comment | regex | literal | identifier |
+          separator | operator}
+;level="lexical".

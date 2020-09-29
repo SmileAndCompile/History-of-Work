@@ -1,0 +1,2 @@
+regex ::= "/" {< $any character$ ! "/" | $newline$> | escapeSequence} "/"
+;level="lexical".

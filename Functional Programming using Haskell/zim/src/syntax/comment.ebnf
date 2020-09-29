@@ -1,0 +1,2 @@
+comment ::= (cComment | eolComment)
+;level="lexical".

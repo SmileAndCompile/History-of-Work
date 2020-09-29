@@ -1,0 +1,2 @@
+decimalNumeral ::= "0" | <digit ! "0"> {digit}
+;level="lexical".

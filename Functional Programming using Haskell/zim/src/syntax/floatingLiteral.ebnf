@@ -1,0 +1,3 @@
+floatingLiteral ::= {digit}+ "." {digit} [("e" | "E") [("+" | "-")]
+{digit}+]
+;level="lexical".

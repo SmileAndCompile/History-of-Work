@@ -1,0 +1,2 @@
+integerLiteral ::= (decimalNumeral | hexNumeral | octalNumeral)
+;level="lexical".

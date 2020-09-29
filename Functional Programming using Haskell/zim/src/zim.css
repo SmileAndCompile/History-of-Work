@@ -1,0 +1,49 @@
+.container {
+	width: 100%;
+}
+
+#content {
+	width: 100%;
+}
+
+#textLeft {
+	text-align: left;
+}
+
+#textRight {
+	text-align: right;
+}
+
+#content table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#match {
+	width: 150;
+}
+
+th {
+	background-color: rgba(20, 20, 250, 0.4);
+}
+
+tr:nth-child(odd) {
+	background-color: rgba(211, 211, 211, 0.3);
+}
+
+tr:nth-child(even) {
+	background-color: rgba(211, 211, 211, 0.6);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+h1 {
+	border-bottom: 2px solid black;
+	display: inline;
+}

@@ -1,0 +1,17 @@
+To create a new verification file (clean state), use the -c option when running the file:
+
+./IDS.sh -c
+
+To check the clean state for any intrusion, use the -v option when running the file:
+
+./IDS.sh -v
+
+Categories of Changes:
+
+Permissions: Any file / directory whose permissions have been changed.
+
+File Changed: Any file / directory whose modifiers (file links, owner, group, size, last date and time modified) or whose contents have been changed. A file which is 'renamed' is treated as being a file which was created and deleted - which is intentional, as within the real world this could happen, and misinterpreting a file which has been created / deleted with a file that has been renamed is very dangerous.
+
+File Deleted: Any file / directory which has been deleted since the clean state was established.
+
+File Created: Any file / directory which has been deleted since the clean state was established.

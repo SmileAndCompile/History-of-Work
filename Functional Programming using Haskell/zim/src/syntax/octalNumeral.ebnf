@@ -1,0 +1,2 @@
+octalNumeral ::= "0" {octalDigit}+
+;level="lexical".

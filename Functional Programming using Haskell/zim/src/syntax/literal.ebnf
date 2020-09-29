@@ -1,0 +1,3 @@
+literal ::= (integerLiteral | floatingLiteral | stringLiteral1 | 
+stringLiteral2 | stringLiteral3)
+;level="lexical".

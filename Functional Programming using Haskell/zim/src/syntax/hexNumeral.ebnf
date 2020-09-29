@@ -1,0 +1,2 @@
+hexNumeral ::= "0x" {hexDigit}+
+;level="lexical".

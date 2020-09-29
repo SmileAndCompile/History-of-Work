@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{techReport}
+{D}ick {G}rune.
+\newblock {C}oncise {R}eport on the {A}lgorithms in {S}im.
+\newblock \url{https://dickgrune.com/Programs/similarity_tester/TechnReport}.
+\newblock Accessed: 2019-10-18.
+
+\bibitem{ABRLibraries}
+{A}ndrew {R}ock.
+\newblock {ABR} {H}askell {L}ibraries.
+\newblock
+  \url{https://www.ict.griffith.edu.au/arock/ABRHLibs/doc/ABRHLibs.pdf}.
+\newblock Accessed: 2019-10-18.
+
+\end{thebibliography}

@@ -1,0 +1,54 @@
+data Token =   Key Int
+             | Const Int
+             | Id Int
+        deriving (Eq, Ord, Show)
+        
+-- Each Key is the same across all files
+-- Numeric constants should be treated like keywords (same across all files)
+--    String constants should all have exactly the same token.
+-- Ids are assigned a unique Token depending on the position they occur first
+             
+type TokenMaps = (Map Lexeme Token, Map Token Lexeme)
+             
+-- take all of the keywords, separators, and operators and assign
+-- token that will be fixed for all files 
+-- done once
+makeMapsKey :: [Lexeme] -> TokenMaps
+-- example output: [("let", Key 1), (";", Key 2), ...]
+
+-- add to the existing TokenMaps all of the new tokens for constants from *all* files. 
+-- done once (consuming all files)
+makeMapsConst ::  TokenMaps -> [[(Tag, Lexeme), Pos]] -> TokenMaps
+-- example output: [("let", Key 1), (";", Key 2), ("3", Const 1), ...]
+
+
+-- add to the existing TokenMaps all of the new tokens from *a* file. 
+-- done for every file, making a TokenMaps for each file
+makeMapsFile ::  TokenMaps -> [(Tag, Lexeme), Pos] -> TokenMaps
+-- example output: [("let", Key 1), (";", Key 2), ("3", Const 1), ("x", Id 1)...]
+
+-- take 1 file and replace all the lexemes with tokens
+-- done for each file
+-- for Strings hard code Const 0
+-- anything else, look it up in the map
+tokenize :: Map Lexeme Token -> [(Tag, Lexeme), Pos] -> [(Token, Pos)]
+-- example output: [(Key 7, (0, 7)), (Id 1, (0, 12)), (Const 1, (0, 20)), ...]
+
+-- findRuns min ts1 ts2 returns the starting positions of matching runs of
+-- tokens that are at least min long.
+-- done for each pair of files
+findRuns :: Int -> [(Token, Pos)] -> [(Token, Pos)] -> [(Pos, Pos, Int)]
+-- runs match if:
+--    - all the keywords match exactly (have the same token)
+--    - all the constants match exactly (have the same token)
+--    - all of Ids can unify 
+-- 2 runs
+--   [(Key 7, (0, 7)), (Id 7, (0, 12)), (Const 1, (0, 20)),  (Id 7, (0, 12))...]
+--   [(Key 7, (0, 9)), (Id 9, (0, 12)), (Const 1, (0, 20)),  (Id 9, (0, 12))...]
+-- reassign the Id values depending on the order within these runs
+--   [(7, 1)]
+--   [(Key 7, (0, 7)), (Id 1, (0, 12)), (Const 1, (0, 20)),  (Id 1, (0, 12))...]
+--   [(9, 1)]
+--   [(Key 7, (0, 7)), (Id 1, (0, 12)), (Const 1, (0, 20)),  (Id 1, (0, 12))...]
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

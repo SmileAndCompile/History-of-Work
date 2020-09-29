@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset=\"utf-8\">
+      <link href="zim.css" rel="stylesheet">
+      <title>Zim Execution Report</title>
+   </head>
+   <body>
+      <div class="container">
+         <div id="content">
+            <h1>Zim Execution Report</h1>
+      
+            <h2>Files</h2>
+      
+            <table>
+               <tr>
+                  <th>File ##</th>
+                  <th>Tokens</th>
+                  <th align="left">Path</th>
+               </tr>
+               #foreach#files#
+                  <tr>
+                     <td id="textRight"><a name="f#number#">#number#</a></td>
+                     <td id="textRight">#tokensNum#</td>
+                     <td id="textLeft"><tt>#path#</tt></td>
+                  </tr>
+               #end#
+            </table>
+      
+            #ifdef#listFlag#
+            <table>
+               <tr>
+                  <th>File ##</th>
+                  <th id="textLeft">Source</th>
+               </tr>
+               #foreach#files#
+                  <tr>
+                     <td valign="top"><a name="s#number#">#number#</a></td>
+                     <td id="textRight"><pre>#fullSource#</pre></td>
+                  </tr>
+               #end#
+            </table>
+            #end#
+      
+            <h2>Matches</h2>
+
+            <table>
+               <tr>
+                  <th>File ##1</th>
+                  <th>File ##2</th>
+                  <th>Pos in 1 (line,col)</th>
+                  <th>Pos in 2 (line,col)</th>
+                  <th>Tokens</th>
+                  <th>Match ##</th>
+               </tr>
+               #foreach#matches#
+               <tr>
+                  <td id="textRight"><a name="f#file1#"><a href="##f#file1#">#file1#</a></td>
+                  <td id="textRight"><a name="f#file2#"><a href="##f#file2#">#file2#</a></td>
+                  <td id="textLeft">#pos1#</td>
+                  <td id="textLeft">#pos2#</td>
+                  <td id="textRight">#matchingTokens#</td>
+                  <td id="textRight"><a href="##m#matchNum#">#matchNum#</a></td>
+               </tr>
+               #end#
+            </table>
+ 
+            <h2>Sources</h2>
+ 
+            <table>
+               <tr>
+                  <th>Match ##</th>
+                  <th>Tokens 1</th>
+                  <th>Tokens 2</th> 
+                  <th>Source 1</th>
+                  <th>Source 2</th> 
+               </tr>
+               #foreach#matches#
+               <tr>
+                  <td valign="top"  id="textRight"><a name="m#matchNum#">#matchNum#</a></td>
+                  <td id="textLeft"><pre>#tokens1#</pre></td>
+                  <td id="textLeft"><pre>#tokens2#</pre></td>
+                  <td id="textLeft"><pre>#source1#</pre></td>
+                  <td id="textLeft"><pre>#source2#</pre></td>
+               </tr> 
+               #end#
+            </table> 
+
+            <h2>Cross Totals</h2>
+ 
+            <table>
+               <tr>
+                  <th>File ##1</th>
+                  <th>File ##2</th>
+                  <th>Total Tokens</th>
+               </tr>
+               #foreach#crossTotals#
+               <tr>
+                  <td id="textRight"><a href="##f#file1#">#file1#</a></td>
+                  <td id="textRight"><a href="##f#file2#">#file2#</a></td>
+                  <td id="textRight">#tokens#</td>
+               </tr> 
+               #end#
+            </table> 
+
+            <h2>Clusters</h2>
+ 
+            <table>
+               <tr>
+                  <th>Clusters</th>
+               </tr>
+               #foreach#clusters#
+               <tr>
+                  <td id="textRight">#cluster#</td>
+               </tr> 
+               #end#
+            </table> 
+
+         </div>
+      </div>  
+   </body>
+</html>

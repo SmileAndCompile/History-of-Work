@@ -1,0 +1,2 @@
+eolComment ::= "//" < $any characters$ ! $newline$ > $newline$
+;level="lexical".

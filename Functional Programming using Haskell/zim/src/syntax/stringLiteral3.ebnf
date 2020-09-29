@@ -1,0 +1,3 @@
+stringLiteral3 ::= "`" {< $any character$ ! "`" | "\\" | $newline$ | 
+$carriage return$> | escapeSequence} "`"
+;level="lexical".
